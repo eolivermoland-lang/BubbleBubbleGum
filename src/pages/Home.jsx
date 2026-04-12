@@ -1,13 +1,16 @@
 import Navbar from '../components/Navbar'
 import Hero from '../components/Hero'
-import Cards from '../components/Cards'
+import Products from '../components/Products'
+import bg from '../assets/background.jpg'
 
 export default function Home() {
   return (
-    <div>
+    <div className="min-h-screen bg-cover bg-center bg-fixed"
+          style={{ backgroundImage: `url(${bg})` }}
+    >
       <Navbar />
       <Hero />
-      <Cards />
+      <Products />
     </div>
   )
 }
