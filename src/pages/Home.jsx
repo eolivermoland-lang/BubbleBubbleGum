@@ -5,7 +5,7 @@ import bg from '../assets/background.jpg'
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-cover bg-center bg-fixed"
+    <div className="min-h-dvh bg-cover bg-center md:bg-fixed"
           style={{ backgroundImage: `url(${bg})` }}
     >
       <Navbar />
