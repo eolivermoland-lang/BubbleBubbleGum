@@ -5,12 +5,20 @@ import bg from '../assets/background.jpg'
 
 export default function Home() {
   return (
-    <div className="min-h-dvh bg-cover bg-center md:bg-fixed"
-          style={{ backgroundImage: `url(${bg})` }}
-    >
-      <Navbar />
-      <Hero />
-      <Products />
-    </div>
+    <>
+      <div className="fixed inset-0 -z-10">
+        <img
+          src={bg}
+          className="w-full h-full object-cover"
+        />
+      </div>
+      
+      <div className="relative min-h-dvh">    
+        <Navbar />
+        <Hero />
+        <Products />
+
+      </div>
+    </>
   )
 }
