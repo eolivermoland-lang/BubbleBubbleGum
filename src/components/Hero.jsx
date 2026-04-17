@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import Herosn from '../assets/Herosn.png';
+import Herosn from '../assets/herosn.png';
 
 export default function Hero() {
   const { scrollY } = useScroll();
