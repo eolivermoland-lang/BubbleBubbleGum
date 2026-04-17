@@ -9,7 +9,7 @@ export default function Navbar({ cart }) {
     <nav className="bg-linear-to-tl from-pink-300 to-pink-600 text-green-300 flex justify-between items-center relative p-4">
 
 
-      <h1 className="md:text-2xl text-xl font-extrabold tracking-tighter italic">
+      <h1 className="md:text-3xl text-2xl font-extrabold tracking-tighter italic">
         BubbleBubbleGum
       </h1>
 
@@ -21,7 +21,7 @@ export default function Navbar({ cart }) {
         <Link to="/tjenester" className="hover:text-green-600 transition duration-100">
           Tjenester
         </Link>
-        <Link to="/cart" className="relative text-xl">
+        <Link to="/cart" className="relative text-xl ">
           🛒
 
           {cart?.length > 0 && (
