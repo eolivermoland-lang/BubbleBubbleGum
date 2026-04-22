@@ -10,6 +10,7 @@ export default function Products({ addToCart }) {
       id: 1,
       name: "Blue Razz",
       desc: "The blue raspberry flavor",
+      price: 119,
       img: blue,
       color: "from-blue-300 to-blue-700"
     },
@@ -17,6 +18,7 @@ export default function Products({ addToCart }) {
       id: 2,
       name: "Watermelon Dream",
       desc: "The watermelon flavor",
+      price: 129,
       img: watermellon,
       color: "from-green-600 to-red-400"
     },
@@ -24,6 +26,7 @@ export default function Products({ addToCart }) {
       id: 3,
       name: "Wildberry Taste",
       desc: "The wildberry flavor",
+      price: 99,
       img: red,
       color: "from-red-300 to-red-700"
     },
@@ -31,13 +34,14 @@ export default function Products({ addToCart }) {
       id: 4,
       name: "Pineapple Punch",
       desc: "The pineapple flavor",
+      price: 109,
       img: yellow,
       color: "from-yellow-300 to-yellow-700"
     }
   ]
 
   return (
-    <section className="text-white grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 p-4 md:p-10">
+    <section className="text-white grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 p-4 mt-20 py-20 md:p-10 ">
       {products.map((p) => (
         <div
           key={p.id}

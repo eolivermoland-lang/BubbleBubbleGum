@@ -1,11 +1,7 @@
-import { useState } from "react"
-import Navbar from '../components/Navbar'
-import Hero from '../components/Hero'
-import Products from '../components/Products'
+import Navbar from '../components/Navbar';
 import bg from '../assets/background.jpg'
-
-export default function Home({ cart, addToCart }) {
-
+import Cartp from '../components/Cartp';
+export default function Cart2({ cart}) {
   return (
     <>
       <div className="fixed inset-0 -z-10">
@@ -14,8 +10,7 @@ export default function Home({ cart, addToCart }) {
 
       <div className="relative min-h-dvh">
         <Navbar cart={cart} />
-        <Hero />
-        <Products addToCart={addToCart} />
+        <Cartp cart={cart} />
       </div>
     </>
   )

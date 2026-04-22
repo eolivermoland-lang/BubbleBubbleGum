@@ -1,7 +1,7 @@
 import Navbar from '../components/Navbar';
 import Login from '../components/Login';
 import bg from '../assets/background.jpg'
-export default function Cart() {
+export default function Cart({ cart }) {
   return (
     <>
       <div className="fixed inset-0 -z-10">
@@ -9,7 +9,7 @@ export default function Cart() {
       </div>
 
       <div className="relative min-h-dvh">
-        <Navbar />
+        <Navbar cart={cart} />
         <Login />
       </div>
     </>

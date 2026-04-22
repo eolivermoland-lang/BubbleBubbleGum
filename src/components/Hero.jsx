@@ -12,7 +12,7 @@ const scale = useTransform(scrollY, [0, 500], [1, 1.05]);
 
   return (
     <section className="py-15">
-      <motion.img className="mx-auto w-full md:h-155 h-65"  src={Herosn} alt="Hero Image" style={{ y, scale }} />
+      <motion.img className="mx-auto w-full md:h-150 h-60 border border-pink-300 shadow-2xl"  src={Herosn} alt="Hero Image" style={{ y, scale }} />
     </section>
   )
 }
