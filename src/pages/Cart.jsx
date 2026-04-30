@@ -1,7 +1,12 @@
-import Navbar from '../components/Navbar';
-import Login from '../components/Login';
+import Navbar from '../components/Navbar'
+import Login from '../components/Login'
+import SignUp from '../components/SignUp'
 import bg from '../assets/background.jpg'
+import { useState } from "react"
+
 export default function Cart({ cart }) {
+  const [showLogin, setShowLogin] = useState(true)
+
   return (
     <>
       <div className="fixed inset-0 -z-10">
@@ -10,7 +15,12 @@ export default function Cart({ cart }) {
 
       <div className="relative min-h-dvh">
         <Navbar cart={cart} />
-        <Login />
+
+        {showLogin ? (
+          <Login setShowLogin={setShowLogin} />
+        ) : (
+          <SignUp setShowLogin={setShowLogin} />
+        )}
       </div>
     </>
   )

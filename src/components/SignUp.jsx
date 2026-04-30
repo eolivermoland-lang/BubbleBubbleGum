@@ -1,26 +1,26 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { auth } from "../firebase"
-import { signInWithEmailAndPassword } from "firebase/auth"
+import { createUserWithEmailAndPassword } from "firebase/auth"
 
-export default function Login({ setShowLogin }) {
+export default function SignUp({ setShowLogin }) {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [error, setError] = useState("")
   const navigate = useNavigate()
 
-  const handleLogin = async () => {
+  const handleSignUp = async () => {
     if (!email.trim() || !password.trim()) {
       setError("Please fill in both fields")
       return
     }
 
     try {
-      await signInWithEmailAndPassword(auth, email, password)
+      await createUserWithEmailAndPassword(auth, email, password)
       setError("")
       navigate("/Cart2")
     } catch (err) {
-      setError("Wrong email or password")
+      setError("Could not create account")
     }
   }
 
@@ -31,7 +31,7 @@ export default function Login({ setShowLogin }) {
         <div className="rounded-xl w-[80%] bg-gray-50/30 shadow-xl p-5 flex flex-col gap-2">
 
           <h1 className="text-center text-green-300 font-extrabold text-3xl py-6">
-            Login
+            Sign up
           </h1>
 
           <input
@@ -55,17 +55,17 @@ export default function Login({ setShowLogin }) {
           )}
 
           <button
-            onClick={handleLogin}
+            onClick={handleSignUp}
             className="border-2 rounded-2xl w-[48%] bg-pink-400 mx-auto"
           >
-            Login
+            Create account
           </button>
 
           <button
-            onClick={() => setShowLogin(false)}
+            onClick={() => setShowLogin(true)}
             className="text-sm text-blue-700 underline mt-2"
           >
-            Don't have an account? Sign up
+            Already have an account? Login
           </button>
 
         </div>
