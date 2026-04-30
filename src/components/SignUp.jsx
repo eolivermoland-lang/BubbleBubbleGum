@@ -39,7 +39,7 @@ export default function SignUp({ setShowLogin }) {
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="rounded-2xl border-2 p-1 px-4"
+            className="rounded-2xl border md:w-[50%] mx-auto p-1 px-4"
           />
 
           <input
@@ -47,7 +47,7 @@ export default function SignUp({ setShowLogin }) {
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="rounded-2xl border-2 p-1 px-4"
+            className="rounded-2xl border md:w-[50%] mx-auto p-1 px-4"
           />
 
           {error && (
@@ -56,7 +56,7 @@ export default function SignUp({ setShowLogin }) {
 
           <button
             onClick={handleSignUp}
-            className="border-2 rounded-2xl w-[48%] bg-pink-400 mx-auto"
+            className="border-2 rounded-2xl w-[50%] bg-pink-400/20 mx-auto hover:scale-102 transition duration-75"
           >
             Create account
           </button>

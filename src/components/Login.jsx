@@ -30,7 +30,7 @@ export default function Login({ setShowLogin }) {
 
         <div className="rounded-xl w-[80%] bg-gray-50/30 shadow-xl p-5 flex flex-col gap-2">
 
-          <h1 className="text-center text-green-300 font-extrabold text-3xl py-6">
+          <h1 className="text-center text-green-300 font-extrabold text-3xl py-6 rounded-xl ">
             Login
           </h1>
 
@@ -39,7 +39,7 @@ export default function Login({ setShowLogin }) {
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="rounded-2xl border-2 p-1 px-4"
+            className="rounded-2xl border md:w-[50%] mx-auto p-1 px-4"
           />
 
           <input
@@ -47,7 +47,7 @@ export default function Login({ setShowLogin }) {
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="rounded-2xl border-2 p-1 px-4"
+            className="rounded-2xl border md:w-[50%] mx-auto p-1 px-4"
           />
 
           {error && (
@@ -56,7 +56,7 @@ export default function Login({ setShowLogin }) {
 
           <button
             onClick={handleLogin}
-            className="border-2 rounded-2xl w-[48%] bg-pink-400 mx-auto"
+            className="border rounded-2xl w-[50%] bg-pink-400/20 mx-auto hover:scale-102 transition duration-75"
           >
             Login
           </button>
